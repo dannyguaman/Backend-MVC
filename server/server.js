@@ -12,7 +12,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Rutas
 const allUserRoutes = require('./routes/user.routes');
+const allEnrollmentRoutes = require('./routes/enrollment.routes');
 allUserRoutes(app);
+allEnrollmentRoutes(app);
 
 app.listen(port, () => {
   console.log("Server listening at port", port);
